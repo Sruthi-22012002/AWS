@@ -117,6 +117,8 @@ sudo docker run hello-world
 ```
 sudo apt install -y mysql-client
 ```
+---
+
 ### Step 1 : Clone from github
 ```
 git clone https://github.com/vignesh-0002/EMS-ops.git
@@ -224,8 +226,13 @@ EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 ### Database Creation
+#### Login
 ```
 mysql -h <RDS-endpoint> -P 3306 -u <username> -p
+```
+#### Create Database
+```
+create database ems;
 ```
 ### Dcokerise the image
 > Create a frontend immage `nano docker-compose.yml`
@@ -271,6 +278,8 @@ networks:
 docker compose -f docker-compose.yml build
 docker compose -f docker-compose.yml up -d
 ```
+![image](https://github.com/user-attachments/assets/d362a1de-94b0-4cb7-8e7d-2442114b034f)
+
 ---
 ## 📦 Deploying EC2 Application Behind an AWS ALB
 
@@ -322,4 +331,5 @@ This guide walks you through setting up an **Application Load Balancer (ALB)** t
 ```
 http://ec2-alb-638808773.ap-northeast-3.elb.amazonaws.com/employees
 ```
+![image](https://github.com/user-attachments/assets/18c6f381-8323-4f35-a1a6-24b607a5e107)
 
