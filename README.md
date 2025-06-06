@@ -1,3 +1,8 @@
+<div align ="center"><h2>EMS OPS Application</h2></div>
+
+## Archietecture Diagram
+![image](https://github.com/user-attachments/assets/8a3adff1-e423-4ad8-8bd8-34f7ed79be5d)
+
 ## 🚀 Launching an EC2 Instance on AWS Console
 
 This guide provides a step-by-step walkthrough for launching a virtual server (EC2 instance) on Amazon Web Services (AWS) using the AWS Management Console.
