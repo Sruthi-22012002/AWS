@@ -1,4 +1,9 @@
 <div align ="center"><h2>EMS OPS Application</h2></div>
+The ems-ops-phase-1 project is a full-stack Employee Management System built using React for the frontend and Spring Boot for the backend. The frontend, located in the react-hooks-frontend directory, is developed using modern React with hooks. It includes components for adding new employees, listing existing ones, and handling layout with header and footer components. The EmployeeService.js file acts as a service layer to communicate with the backend APIs. Static assets and configuration files such as index.html and manifest.json are placed inside the public folder, while all main React components reside in the src directory.
+
+The backend, located in the springboot-backend directory, is a Java-based RESTful API built with Spring Boot. It uses Maven for dependency management, as seen from the presence of the pom.xml file and Maven wrapper scripts. This backend exposes endpoints that the frontend consumes to perform CRUD operations (Create, Read, Update, Delete) on employee data.
+
+The project also includes a README.md file and an img folder containing UI screenshots (such as the add-employee and employee list screens), likely for documentation or user guidance. Together, the React frontend and Spring Boot backend form a complete system for managing employee records, with capabilities to display, add, and potentially update or delete employee information through a modern web interface.
 
 ## Archietecture Diagram
 ![image](https://github.com/user-attachments/assets/30e5e6e1-b5b1-4ada-9c30-97d2fdd17d36)
