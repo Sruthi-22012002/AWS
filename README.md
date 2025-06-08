@@ -1,7 +1,7 @@
 <div align ="center"><h2>EMS OPS Application</h2></div>
 
 ## Archietecture Diagram
-![image](https://github.com/user-attachments/assets/8a3adff1-e423-4ad8-8bd8-34f7ed79be5d)
+![image](https://github.com/user-attachments/assets/5b33fa17-d304-4700-ab88-7c4886f5e07b)
 
 ## 🚀 Launching an EC2 Instance on AWS Console
 
