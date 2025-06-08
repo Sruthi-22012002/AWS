@@ -338,3 +338,82 @@ http://ec2-alb-638808773.ap-northeast-3.elb.amazonaws.com/employees
 ```
 ![image](https://github.com/user-attachments/assets/18c6f381-8323-4f35-a1a6-24b607a5e107)
 
+---
+## Auto Scaling Group
+* An Auto Scaling Group (ASG) in AWS is a service that automatically manages the number of Amazon EC2 instances in a group based on rules you define — such as CPU usage, traffic, or schedules.
+### Features of Amazon EC2 Auto Scaling
+* Monitoring the health of running instances
+* Custom health checks
+* Balancing capacity across Availability Zones
+* Multiple instance types and purchase options
+* Automated replacement of Spot Instances
+* Load balancing
+### 📤 Scale Out (Add Instances)
+* ➡️ Increasing the number of EC2 instances in the Auto Scaling Group.
+### When it happens:
+* High CPU usage (e.g., > 70%)
+* Increased network traffic or request count
+* Scheduled scaling during expected load (e.g., daily at 9AM)
+* Manual adjustment of ASG desired capacity
+### 📥 Scale In (Remove Instances)
+* ➡️ Decreasing the number of EC2 instances in the Auto Scaling Group.
+### When it happens:
+* Low CPU usage (e.g., < 20%)
+* Decreased network traffic
+* After peak hours or in scheduled scale-down window
+* Manual reduction of desired capacity
+### 📘 Step-by-Step Guide
+#### 🔹 Step 1: Create a Launch Template
+
+1. Go to the **EC2 Dashboard** in the AWS Console.
+2. Click **Launch Templates** from the left sidebar.
+3. Click **Create launch template**.
+4. Fill in the required details:
+   - **Name**: `my-launch-template`
+   - **AMI ID**: Choose a valid AMI (e.g., Amazon Linux 2)
+   - **Instance type**: e.g., `t2.micro`
+   - **Key pair**: Select your SSH key pair
+   - **Security group**: Select an existing one or create new
+5. (Optional) Add user data for startup scripts.
+6. Click **Create launch template**.
+
+#### 🔹 Step 2: Create Auto Scaling Group
+
+1. In the **EC2 Dashboard**, click **Auto Scaling Groups** in the left sidebar.
+2. Click **Create Auto Scaling group**.
+3. Provide the following:
+   - **Auto Scaling group name**: `my-asg`
+   - **Launch template**: Select the one you created
+4. Click **Next**.
+
+#### 🔹 Step 3: Configure Network
+
+1. Select your **VPC**.
+2. Choose **one or more subnets** (preferably public ones).
+3. Click **Next**.
+
+---
+
+#### 🔹 Step 5: Configure Group Size and Scaling Policies
+
+1. Set the following:
+   - **Desired capacity**: `2`
+   - **Minimum capacity**: `1`
+   - **Maximum capacity**: `3`
+2. Select **Target tracking scaling policy**.
+3. Choose a metric, e.g., **Average CPU Utilization**, and set threshold (e.g., `50%`).
+4. Click **Next**.
+
+#### 🔹 Step 7: Add Tags
+
+1. Example:
+   - Key: `Name`
+   - Value: `AutoScalingEC2`
+2. Click **Next**.
+
+#### 🔹 Step 8: Review and Create
+
+1. Review all configurations.
+2. Click **Create Auto Scaling group**.
+
+
