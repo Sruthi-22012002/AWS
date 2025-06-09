@@ -5,12 +5,12 @@
 1. [Overview](#overview)  
 2. [Features](#features)  
 3. [Installation Methods](#installation-methods)  
-   3.1 **Method 1: WSL Installation**  
+   3.1 [Method 1: WSL Installation](#method-1-wsl-installation)  
    - [Step 1: Add GitLab Runner Repository](#step-1-add-gitlab-runner-repository)  
    - [Step 2: Install GitLab Runner](#step-2-install-gitlab-runner)  
    - [Step 3: Verify Installation](#step-3-verify-installation)  
    - [Step 4: Register the Runner](#step-4-register-the-runner)  
-   3.2 **Method 2: Docker Installation**  
+3.2 [Method 2: Docker Installation](#method-2-docker-installation)  
    - [Step 1: Create Docker Volumes](#step-1-create-docker-volumes)  
    - [Step 2: Run GitLab Container](#step-2-run-gitlab-container)  
    - [Step 3: Access GitLab in Browser](#step-3-access-gitlab-in-browser)  
