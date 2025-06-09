@@ -81,7 +81,7 @@ sudo docker volume create gitlab-data
 ```
 ##### Step 2: Run GitLab Container
 ```
-docker run --detach \
+sudo docker run --detach \
   --hostname gitlab.example.com \
   --publish 443:443 --publish 80:80 --publish 22:22 \
   --name gitlab \
@@ -92,6 +92,8 @@ docker run --detach \
   gitlab/gitlab-ce:latest
 ```
 > Replace `gitlab.example.com` with your server's `domain` or `IP address`.
+
+![image](https://github.com/user-attachments/assets/7bca612c-d7db-485c-a39d-c86e904aee6d)
 
 ##### Step 3: Access GitLab
 * Open your browser and navigate to:
