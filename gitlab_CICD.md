@@ -139,9 +139,14 @@ gitlab-runner --version
 sudo gitlab-runner register
 ```
 > Provide these details when prompted:
-> GitLab URL: http://<your-gitlab-server> (use your GitLab CE IP/domain)
+
+   > GitLab URL: http://<your-gitlab-server> (use your GitLab CE IP/domain)
+
 > Registration token: (paste from GitLab)
+
 > Description: e.g., ec2-runner
+
 > Tags: ec2
+
 > Executor: Choose shell
 
