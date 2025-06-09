@@ -102,6 +102,12 @@ sudo docker run --detach \
 ##### Step 3: Access GitLab
 * Open your browser and navigate to:
 > http://<your-server-ip> or https://<your-server-domain>
+
+![image](https://github.com/user-attachments/assets/3e7819ca-1a92-48e1-b513-a1e0005fd050)
+
+##### Register now
+![image](https://github.com/user-attachments/assets/e6b4a33a-9d44-48db-89b2-2c59369e0673)
+
 * The first time you access GitLab, you'll be prompted to set the root password.
 ##### Step 5: GitLab Admin Login
 * Username: root
