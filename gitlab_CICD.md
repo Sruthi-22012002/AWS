@@ -95,6 +95,10 @@ sudo docker run --detach \
 
 ![image](https://github.com/user-attachments/assets/7bca612c-d7db-485c-a39d-c86e904aee6d)
 
+> check disk space : df -h
+
+> sudo docker system prune -a --volumes
+
 ##### Step 3: Access GitLab
 * Open your browser and navigate to:
 > http://<your-server-ip> or https://<your-server-domain>
