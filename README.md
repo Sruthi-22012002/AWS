@@ -285,8 +285,8 @@ networks:
 ```
 ## Build and run the iamge
 ```
-docker compose -f docker-compose.yml build
-docker compose -f docker-compose.yml up -d
+sudo docker compose -f docker-compose.yml build
+sudo docker compose -f docker-compose.yml up -d
 ```
 ![image](https://github.com/user-attachments/assets/d362a1de-94b0-4cb7-8e7d-2442114b034f)
 
