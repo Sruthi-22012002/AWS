@@ -75,9 +75,9 @@ ssh -i "aws-ec2-key.pem" ubuntu@ec2-13-208-161-102.ap-northeast-3.compute.amazon
 #### Method 1: Install GitLab in a Docker container
 ##### Step 1: Create Docker Volume for Persistence
 ```
-docker volume create gitlab-config
-docker volume create gitlab-logs
-docker volume create gitlab-data
+sudo docker volume create gitlab-config
+sudo docker volume create gitlab-logs
+sudo docker volume create gitlab-data
 ```
 ##### Step 2: Run GitLab Container
 ```
@@ -92,6 +92,7 @@ docker run --detach \
   gitlab/gitlab-ce:latest
 ```
 > Replace `gitlab.example.com` with your server's `domain` or `IP address`.
+
 ##### Step 3: Access GitLab
 * Open your browser and navigate to:
 > http://<your-server-ip> or https://<your-server-domain>
@@ -99,17 +100,7 @@ docker run --detach \
 ##### Step 5: GitLab Admin Login
 * Username: root
 * Password: (set during the first-time access)
-##### Step 6: Stop and Remove GitLab Container (Optional)
-###### To stop GitLab:
-```
-docker stop gitlab
-```
-###### To remove gitlab
-```
-docker rm gitlab
-```
-#### Method 2: GitLab official GPG key
-##### Step 1: Install GitLab Runner
+##### Step 6: Install GitLab Runner
 ```
 # 1. Install required packages
 sudo apt-get update
@@ -125,11 +116,13 @@ echo "deb [signed-by=/usr/share/keyrings/gitlab-runner-archive-keyring.gpg] http
 sudo apt-get update
 sudo apt-get install gitlab-runner -y
 ```
-##### Step 2: Check GitLab Runner Version
+##### Step 7: Check GitLab Runner Version
 ```
 gitlab-runner --version
 ```
-##### Step 3: Register the Runner with GitLab CE
+![image](https://github.com/user-attachments/assets/ae578e85-1a4a-4047-be73-a0f60b9ca450)
+
+##### Step 8: Register the Runner with GitLab CE
 * Go to your GitLab CE web interface
 * Navigate to:
 **Project → Settings → CI/CD → Runners → Expand**
