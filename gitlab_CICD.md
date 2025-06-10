@@ -110,6 +110,27 @@ sudo docker run --detach \
 
 * The first time you access GitLab, you'll be prompted to set the root password.
 ##### Step 5: GitLab Admin Login
+###### Login error
+> Your account is pending approval from your GitLab administrator and hence blocked. Please contact your GitLab administrator if you think this is an error.
+
+> Disable if admin enable
+```
+sudo docker exec -it gitlab-new gitlab-rails runner "ApplicationSetting.last.update(require_admin_approval_after_user_signup: false)"
+```
+> one-line command to approve user manually :
+```
+sudo docker exec -it gitlab-new gitlab-rails runner "user = User.find_by(email: 'sruthi@jumisa.io'); user.confirmed_at = Time.now; user.save!"
+```
+> Active user
+```
+sudo docker exec -it gitlab-new gitlab-rails runner "user = User.find_by(email: 'sruthi@jumisa.io'); user.state = 'active'; user.save!"
+```
+![image](https://github.com/user-attachments/assets/ef183d61-611b-4cdb-83a8-ea2f6b58da2f)
+
+> Change yourself to admin to access the page
+```
+sudo docker exec -it gitlab-new gitlab-rails runner "user = User.find_by(email: 'sruthi@jumisa.io'); user.admin = true; user.save!"
+```
 * Username: root
 * Password: (set during the first-time access)
 ##### Step 6: Install GitLab Runner
