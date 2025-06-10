@@ -187,8 +187,12 @@ gitlab-runner --version
 ##### Step 8: Register the Runner with GitLab CE
 * Go to your GitLab CE web interface
 * Navigate to:
-**Project → Settings → CI/CD → Runners → Expand**
-* Copy the registration token
+**Project → Settings → CI/CD → Runners
+* Tag : docker-runner
+* Select `Create runner `
+![image](https://github.com/user-attachments/assets/01b43bfa-fce3-4b3a-b67d-57ff87b35b56)
+
+* Copy the registration token 
 * Run this command on the EC2 instance:
 ```
 sudo gitlab-runner register
@@ -204,4 +208,6 @@ sudo gitlab-runner register
 > Tags: ec2
 
 > Executor: Choose shell
+![image](https://github.com/user-attachments/assets/da2d5add-81dc-4c33-a2c8-c9dba75a7830)
+
 
