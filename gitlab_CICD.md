@@ -131,8 +131,12 @@ sudo docker exec -it gitlab-new gitlab-rails runner "user = User.find_by(email: 
 ```
 sudo docker exec -it gitlab-new gitlab-rails runner "user = User.find_by(email: 'sruthi@jumisa.io'); user.admin = true; user.save!"
 ```
-* Username: root
-* Password: (set during the first-time access)
+> Access URL
+```
+http://15.152.37.166/admin
+```
+![image](https://github.com/user-attachments/assets/03378e06-08a7-466f-9e7d-286926cd8cd9)
+
 ##### Step 6: Install GitLab Runner
 ```
 # 1. Install required packages
