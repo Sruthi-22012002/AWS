@@ -131,6 +131,8 @@ sudo docker exec -it gitlab-new gitlab-rails runner "user = User.find_by(email: 
 ```
 sudo docker exec -it gitlab-new gitlab-rails runner "user = User.find_by(email: 'sruthi@jumisa.io'); user.admin = true; user.save!"
 ```
+![image](https://github.com/user-attachments/assets/a790bd64-af71-42d7-8dca-9cf01d74b9a5)
+
 > Access URL
 ```
 http://15.152.37.166/admin
