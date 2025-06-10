@@ -2,20 +2,28 @@
 
 ## 📑 Table of Contents
 
+<div align ="center"><h2>Gitlab CICD</h2></div>
+
+## 📑 Table of Contents
+
 1. [Overview](#overview)  
 2. [Features](#features)  
 3. [Installation Methods](#installation-methods)  
-   3.1 [Method 1: WSL Installation](#method-1-wsl-installation)  
-   - [Step 1: Add GitLab Runner Repository](#step-1-add-gitlab-runner-repository)  
-   - [Step 2: Install GitLab Runner](#step-2-install-gitlab-runner)  
-   - [Step 3: Verify Installation](#step-3-verify-installation)  
-   - [Step 4: Register the Runner](#step-4-register-the-runner)  
-   3.2 [Method 2: Docker Installation](#method-2-docker-installation)  
-   - [Step 1: Create Docker Volumes](#step-1-create-docker-volumes)  
-   - [Step 2: Run GitLab Container](#step-2-run-gitlab-container)  
-   - [Step 3: Access GitLab in Browser](#step-3-access-gitlab-in-browser)  
-   - [Step 4: GitLab Admin Login](#step-4-gitlab-admin-login)  
-   - [Step 5: Stop or Remove GitLab Container](#step-5-stop-or-remove-gitlab-container)
+   - [3.1 Method 1: WSL Installation](#manual-wsl)  
+     - [Step 1: Add GitLab Runner Repository](#step-1-add-the-official-gitlab-runner-repository)  
+     - [Step 2: Install GitLab Runner](#step-2-install-gitlab-runner)  
+     - [Step 3: Verify Installation](#step-3-verify-installation-and-check-version)  
+     - [Step 4: Register the Runner](#step-4-register-the-runner)  
+   - [3.2 Method 2: Docker Installation](#method-1-install-gitlab-in-a-docker-container)  
+     - [Step 1: Create Docker Volume for Persistence](#step-1-create-docker-volume-for-persistence)  
+     - [Step 2: Run GitLab Container](#step-2-run-gitlab-container)  
+     - [Step 3: Access GitLab](#step-3-access-gitlab)  
+     - [Step 4: GitLab Admin Login](#step-5-gitlab-admin-login)  
+     - [Step 5: GitLab Admin Login Error Fix](#solution--login-manually-by-rails)  
+     - [Step 6: Install GitLab Runner](#step-6-install-gitlab-runner)  
+     - [Step 7: Check GitLab Runner Version](#step-7-check-gitlab-runner-version)  
+     - [Step 8: Register the Runner with GitLab CE](#step-8-register-the-runner-with-gitlab-ce)  
+
 
 ## Overview
 * CI/CD is a continuous method of software development, where you continuously build, test, deploy, and monitor iterative code changes.
@@ -112,6 +120,8 @@ sudo docker run --detach \
 ##### Step 5: GitLab Admin Login
 ###### Login error
 > Your account is pending approval from your GitLab administrator and hence blocked. Please contact your GitLab administrator if you think this is an error.
+**Solution : Login manually by Rails**
+> gitlab-rails is a command-line tool used inside the GitLab container to interact with the GitLab Rails application backend (since GitLab is built using Ruby on Rails).
 
 > Disable if admin enable
 ```
