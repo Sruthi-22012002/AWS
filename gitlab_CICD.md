@@ -99,10 +99,27 @@ sudo docker run --detach \
 
 ![image](https://github.com/user-attachments/assets/7bca612c-d7db-485c-a39d-c86e904aee6d)
 
-> check disk space : df -h
-
-> sudo docker system prune -a --volumes
-
+* check disk space
+```
+ df -h
+```
+* Check the folder consuming large amount of disk spcae and remove the unwanted image, volume, or container
+```
+sudo docker system prune -a --volumes
+```
+* Modify the volume size in EC2
+* Expand the partition to use full size
+```
+sudo growpart /dev/xvda 1`
+```
+* Expand the file system
+```
+sudo resize2fs /dev/xvda1`
+```
+* confirm the space
+```
+df -h
+```
 ##### Step 3: Access GitLab
 * Open your browser and navigate to:
 > http://<your-server-ip> or https://<your-server-domain>
