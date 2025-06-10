@@ -2,10 +2,6 @@
 
 ## 📑 Table of Contents
 
-<div align ="center"><h2>Gitlab CICD</h2></div>
-
-## 📑 Table of Contents
-
 1. [Overview](#overview)  
 2. [Features](#features)  
 3. [Installation Methods](#installation-methods)  
