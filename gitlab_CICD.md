@@ -83,6 +83,13 @@ sudo docker volume create gitlab-config
 sudo docker volume create gitlab-logs
 sudo docker volume create gitlab-data
 ```
+| Volume Name    | Purpose                                                | Mounted Path in Container  |
+|----------------|--------------------------------------------------------|-----------------------------|
+| `gitlab-config`| Stores GitLab's configuration files                    | `/etc/gitlab`               |
+| `gitlab-logs`  | Stores GitLab's logs (app, nginx, etc.)                | `/var/log/gitlab`           |
+| `gitlab-data`  | Stores repositories, database, uploads, and artifacts  | `/var/opt/gitlab`           |
+
+
 ##### Step 2: Run GitLab Container
 ```
 sudo docker run --detach \
