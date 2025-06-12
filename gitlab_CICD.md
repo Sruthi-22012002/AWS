@@ -1,5 +1,19 @@
 <div align ="center"><h2>Gitlab CICD</h2></div>
 
+* GitLab is a complete DevSecOps platform, delivered as a single application, that enables teams to collaborate on the entire software  development lifecycle—from planning and coding to testing, deployment, and monitoring.
+* CI/CD is a continuous method of software development, where you continuously build, test, deploy, and monitor iterative code changes.
+* This iterative process helps reduce the chance that you develop new code based on buggy or failed previous versions.
+* GitLab CI/CD can catch bugs early in the development cycle, and help ensure that the code deployed to production complies with your established code standards.
+
+## GitLab CI/CD Highlights
+* Uses .gitlab-ci.yml to define pipeline stages and jobs.
+* Supports multiple executors: Shell, Docker, Kubernetes, etc.
+* Includes features like:
+  * Parallel jobs
+  * Manual approvals
+  * Environment deployments (Dev, Staging, Prod)
+  * Artifacts and caching
+
 ## 📚 Table of Contents
 
 1. [Overview](#overview)  
@@ -38,11 +52,6 @@
        - [test-job2](#test-job2)  
        - [deploy-prod](#deploy-prod)  
    - [Check the status of the job](#check-the-status-of-the-job)  
-
-## Overview
-* CI/CD is a continuous method of software development, where you continuously build, test, deploy, and monitor iterative code changes.
-* This iterative process helps reduce the chance that you develop new code based on buggy or failed previous versions.
-* GitLab CI/CD can catch bugs early in the development cycle, and help ensure that the code deployed to production complies with your established code standards.
 
 ### This process is part of a larger workflow:
 ![image](https://github.com/user-attachments/assets/fbe92e84-5a99-44bd-815d-8fa2c088b5ec)
@@ -235,18 +244,6 @@ sudo gitlab-runner register
 > Executor: Choose shell
 ![image](https://github.com/user-attachments/assets/da2d5add-81dc-4c33-a2c8-c9dba75a7830)
 ---
-<div align="center"><h2>GitLab</h2></div>
-
-GitLab is a complete DevSecOps platform, delivered as a single application, that enables teams to collaborate on the entire software development lifecycle—from planning and coding to testing, deployment, and monitoring.
-
-## GitLab CI/CD Highlights
-* Uses .gitlab-ci.yml to define pipeline stages and jobs.
-* Supports multiple executors: Shell, Docker, Kubernetes, etc.
-* Includes features like:
-  * Parallel jobs
-  * Manual approvals
-  * Environment deployments (Dev, Staging, Prod)
-  * Artifacts and caching
 
 ## How to create a project
 * Click `project` in the right-side menu
