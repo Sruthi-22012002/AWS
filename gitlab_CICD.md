@@ -1,7 +1,5 @@
 <div align ="center"><h2>Gitlab CICD</h2></div>
 
-## 📑 Table of Contents
-
 ## 📚 Table of Contents
 
 1. [Overview](#overview)  
